@@ -81,7 +81,7 @@ class Control:
             # ControlLabel(x, y, width, height, label[, font, textColor, disabledColor, alignment, hasPath, angle])
             self.control = xbmcgui.ControlLabel( x, y, w, h, "", **option )
 
-        elif type( self.controlXML ) == xbmcgui.ControlProgress or self.controlXML.getId() == 2005:
+        elif type( self.controlXML ) == xbmcgui.ControlProgress or self.controlXML.getId() in [2004, 2005 ]:
             # http://passion-xbmc.org/gros_fichiers/XBMC%20Python%20Doc/xbmc_svn/xbmcgui.html#ControlProgress
             valideOption = "texturebg, textureleft, texturemid, textureright, textureoverlay".split( ", " )
             for key, value in kwargs.items():
